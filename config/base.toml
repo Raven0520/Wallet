@@ -1,0 +1,28 @@
+# config
+
+# base settings
+[base]
+  env           = "Local"
+  debug_mode    = "debug"
+  time_location = "Asia/Shanghai"
+
+# file path
+[path]
+  pid = "wallet.pid"
+
+[consul]
+  env  = "Local"
+  host = "localhost"
+  port = 8500
+
+[grpc]
+  name = "BTC"        # GRPC Service Name
+  host = "consul.loc" # Listen address default "consul.loc"
+  port = 24000        # Listen port default ":8700"
+
+[http]
+  host             = "localhost"
+  port             = 10000
+  read_timeout     = 60
+  write_timeout    = 60
+  max_header_bytes = 30
